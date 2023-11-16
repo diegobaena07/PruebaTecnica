@@ -17,7 +17,7 @@ const CuadroInformativo = ({ titulo, numero, porcentajeVerde, porcentajeRojo, le
             {letra !== undefined ?
                 <div className="numero-letra">
                     <span>{numero}</span>
-                    <span style={{ fontSize: "24px" }}>{letra}</span>
+                    <span style={{ fontSize: "24px", marginLeft: "4px" }}>{letra}</span>
                 </div>
                 :
                 <div className="numero-cuadro">

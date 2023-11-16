@@ -2,6 +2,8 @@ import "./PaginaPrincipal.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { FC } from "react";
 import { CuadroInformativo } from "../components/CuadroInformativo/CuadroInformativo";
+import { CuadroClientes } from "../components/CuadroClientes/CuadroClientes";
+import { CuadroRealizarPedido } from "../components/CuadroRealizarPedido/CuadroRealizarPedido";
 
 const PaginaPrincipal: FC = () => {
 
@@ -10,7 +12,7 @@ const PaginaPrincipal: FC = () => {
             <div className="container">
                 <Sidebar />
                 <div className="contenido">
-                    <div className="linea-1">
+                    <div className="titulo-1">
                         <div className="home">
                             <img src="./home-icon.svg" className="img-HomeInicio" />
                             <div className="letras-home">
@@ -42,6 +44,14 @@ const PaginaPrincipal: FC = () => {
                             numero="1,783"
                             letra="Bs"
                             porcentajeVerde="+8.2%" />
+                    </div>
+                    <div className="titulo-2">
+                        <span>Acciones rápidas</span>
+                    </div>
+                    <div className="Cuadros-AccionesRapidas">
+                        <CuadroClientes />
+
+                        <CuadroRealizarPedido />
                     </div>
                 </div>
             </div>
