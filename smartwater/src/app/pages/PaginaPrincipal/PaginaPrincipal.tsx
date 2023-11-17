@@ -4,6 +4,7 @@ import { FC } from "react";
 import { CuadroInformativo } from "../components/CuadroInformativo/CuadroInformativo";
 import { CuadroClientes } from "../components/CuadroClientes/CuadroClientes";
 import { CuadroRealizarPedido } from "../components/CuadroRealizarPedido/CuadroRealizarPedido";
+import { BarChart } from "../components/Barchart/Barchart";
 
 const PaginaPrincipal: FC = () => {
 
@@ -57,6 +58,7 @@ const PaginaPrincipal: FC = () => {
 
                         </div>
                     </div>
+                    <BarChart/>
                 </div>
             </div>
         </>

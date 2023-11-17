@@ -9,7 +9,7 @@
 .container {
     display: flex;
     width: 1440px;
-    height: 1039px;
+    height: 100%;
     max-width: 1440px;
     max-height: 1024px;
 }
