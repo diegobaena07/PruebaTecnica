@@ -4,21 +4,33 @@ type Item = {
     titulo: string,
     img?: string,
     iconDesplegable?: string
+    imgSub?: string,
+    tituloSub?: string,
 }
 
-const AsideItem = ({ titulo, img, iconDesplegable }: Item) => {
+const AsideItem = ({ titulo, img, iconDesplegable, imgSub, tituloSub }: Item) => {
     return (
         <>
             <div className="framer"
                 style={iconDesplegable !== undefined ? { justifyContent: "flex-start", alignItems: "center", gap: 30, display: "inline-flex" } : {}}>
                 <div className="item">
+                    <span className="item-biñeta"></span>
                     <img src={img} />
-                    <div className="letras">
-                        <span>{titulo}</span>
-                    </div>
+                    <span>{titulo}</span>
                 </div>
                 {iconDesplegable &&
-                    <div><img src={iconDesplegable} /></div>
+                    <>
+                        <div className="submenu">
+                            {/* <input type="checkbox" name="submenu" id="submenu" /> */}
+                            <img src={iconDesplegable} />
+                        </div>
+                        {/* <div className="submenu">
+                            <img src={imgSub} />
+                            <div className="letras">
+                                <span>{tituloSub}</span>
+                            </div>
+                        </div> */}
+                    </>
                 }
             </div>
         </>
