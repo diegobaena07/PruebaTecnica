@@ -41,31 +41,33 @@ const CuadroClientes = () => {
                         <img src="./Opciones-icon.svg" />
                     </div>
                 </div>
-                <div className="todos-clientes">
+                <table className="todos-clientes">
                     {Clientes.map((item) => {
                         return (
-                            <div className="cliente">
-                                <div className="perfil-cliente">
-                                    <img src={item.img} className="img-cliente" />
-                                    <div>
-                                        <span>{item.nombre}</span>
-                                    </div>
-                                </div>
-                                <div className="fecha-pago">
-                                    <div className="fecha-cliente">
-                                        <span>20/01/2023</span>
-                                    </div>
-                                    <div className="moneda-cliente">
-                                        <img src="./Moneda-icon.svg" />
+                            <tbody key={item.id}>
+                                <tr className="cliente">
+                                    <td className="perfil-cliente">
+                                        <img src={item.img} className="img-cliente" />
                                         <div>
-                                            <span>100 Bs.</span>
+                                            <span>{item.nombre}</span>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </td>
+                                    <td className="fecha-pago">
+                                        <div className="fecha-cliente">
+                                            <span>20/01/2023</span>
+                                        </div>
+                                        <div className="moneda-cliente">
+                                            <img src="./Moneda-icon.svg" />
+                                            <div>
+                                                <span>100 Bs.</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
                         )
                     })}
-                </div>
+                </table>
             </div>
         </>
     )

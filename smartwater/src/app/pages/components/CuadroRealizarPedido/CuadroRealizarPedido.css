@@ -26,7 +26,7 @@
     margin-bottom: 16PX;
 }
 
-.selec-pedido {
+/* .selec-pedido {
     width: 399px;
     height: 38px;
     flex-shrink: 0;
@@ -38,6 +38,37 @@
     border: 1px solid #626262;
     background: #FFF;
     margin-top: 8px;
+} */
+
+.selec-pedido select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 399px;
+    height: 38px;
+    flex-shrink: 0;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    padding-right: 6px;
+    border-radius: 5px;
+    border: 1px solid #626262;
+    background: #FFF;
+    color: #626262;
+    margin-top: 8px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.selec-pedido i {
+    position: relative;
+    right: 46px;
+    top: 7px;
+    cursor: pointer;
 }
 
 .cantidad-pedido {
@@ -89,4 +120,57 @@
     background: #FFF;
     display: flex;
     justify-content: center;
+}
+
+.numero-input {
+    width: 85px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #626262;
+    border-end-end-radius: 0px;
+    border-top-right-radius: 0px;
+    background: #FFF;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #626262;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.letras-Bs {
+    width: 43px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #626262;
+    border-end-start-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: none;
+    background: #FFF;
+    color: #626262;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn-realizarPedido {
+    width: 166px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1px solid var(--Azul, #367DFD);
+    background: var(--Azul, #367DFD);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    margin-top: 11px;
 }
