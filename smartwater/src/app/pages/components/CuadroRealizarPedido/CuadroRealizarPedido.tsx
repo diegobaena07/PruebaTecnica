@@ -20,7 +20,7 @@ const CuadroRealizarPedido = () => {
                         <select name="cliente" id="cliente" className="selec-pedido">
                             <option value="opciones1" >Botellon de 20 Lts</option>
                         </select>
-                        <div style={{ marginTop: "11px" }}>
+                        <div style={{ marginTop: "11px", gap: "15px", display: "flex" }}>
                             <div className="cantidad-pedido">
                                 <span style={{ marginLeft: "10px" }}>Cantidad</span>
                                 <div className="numero-pedido">
@@ -31,8 +31,14 @@ const CuadroRealizarPedido = () => {
                                     <button type="button" className="boton"><img src="./BotonMas-icon.svg" /></button>
                                 </div>
                             </div>
-                            <div>
-
+                            <div style={{ display: "flex" }}>
+                                <input type="text" defaultValue="15" className="numero-input"/>
+                                <div className="letras-Bs" 
+                                    style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                    <div>
+                                        <span>Bs</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

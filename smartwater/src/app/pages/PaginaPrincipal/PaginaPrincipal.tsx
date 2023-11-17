@@ -52,6 +52,10 @@ const PaginaPrincipal: FC = () => {
                         <CuadroClientes />
 
                         <CuadroRealizarPedido />
+
+                        <div className="cuadro-vacio">
+
+                        </div>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ const Sidebar: FC = () => {
 
     return (
         <>
+        <div className="total-sidebar">
             <aside className="sidebar">
                 <div className="Logo">
                     <span className="smart">Smart</span><span className="water">water</span>
@@ -60,6 +61,7 @@ const Sidebar: FC = () => {
                     </div>
                 </div>
             </aside>
+        </div>
         </>
     )
 }

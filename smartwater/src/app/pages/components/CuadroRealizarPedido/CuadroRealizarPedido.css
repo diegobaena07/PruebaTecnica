@@ -90,3 +90,39 @@
     display: flex;
     justify-content: center;
 }
+
+.numero-input{
+    width: 85px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #626262;
+    border-end-end-radius: 0px;
+    border-top-right-radius: 0px ;
+    background: #FFF;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #626262;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.letras-Bs{
+    width: 43px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #626262;
+    border-end-start-radius: 0px;
+    border-top-left-radius: 0px ;
+    border-left: none;
+    background: #FFF;
+    color: #626262;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -8,12 +8,16 @@
 
 .container {
     display: flex;
+    width: 1440px;
+    height: 1039px;
+    max-width: 1440px;
+    max-height: 1024px;
 }
 
 .contenido {
     width: 85%;
     min-width: 1019px;
-    min-height: 919px;
+    max-height: 1024px;
     margin-left: 20px;
     margin-top: 16px;
     font-family: 'Poppins', sans-serif;
@@ -67,4 +71,13 @@
 .Cuadros-AccionesRapidas {
     display: inline-flex;
     gap: 20px;
+}
+
+.cuadro-vacio{
+    width: 213px;
+    height: 274px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #D6D5D5;
+    background: #FFF;
 }
