@@ -1,26 +1,20 @@
+import { Link } from "react-router-dom";
 import "./AsideItem.css";
 
 type Item = {
-    titulo: string,
+    tituloItem?: string,
     img?: string,
     iconDesplegable?: string
 }
 
-const AsideItem = ({ titulo, img, iconDesplegable }: Item) => {
+const AsideItem = ({ tituloItem, img, iconDesplegable }: Item) => {
     return (
         <>
-            <div className="framer"
-                style={iconDesplegable !== undefined ? { justifyContent: "flex-start", alignItems: "center", gap: 30, display: "inline-flex" } : {}}>
-                <div className="item">
-                    <img src={img} />
-                    <div className="letras">
-                        <span>{titulo}</span>
-                    </div>
+            <Link to={"#"}>
+                <div className="background-item">
+
                 </div>
-                {iconDesplegable &&
-                    <div><img src={iconDesplegable} /></div>
-                }
-            </div>
+            </Link>
         </>
     )
 }
