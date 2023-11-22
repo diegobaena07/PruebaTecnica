@@ -44,7 +44,7 @@ const CuadroClientes = () => {
                 <div className="todos-clientes">
                     {Clientes.map((item) => {
                         return (
-                            <div className="cliente">
+                            <div className="cliente" key={item.id}>
                                 <div className="perfil-cliente">
                                     <img src={item.img} className="img-cliente" />
                                     <div>

@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,900;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap');
 
 .Sidebar {
-    width: 243px;
+    width: 250px;
     height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
     background: #1A3D7D;
+    scrollbar-width: thin;
+    scrollbar-color: #18315e transparent;
+}
+
+/* Estilos específicos de las barras de desplazamiento en Chrome */
+.Sidebar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.Sidebar::-webkit-scrollbar-thumb {
+    background-color: #18315e;
+}
+
+.Sidebar::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 .Logo {
@@ -29,7 +46,20 @@
     line-height: 38.93px;
 }
 
-ul li a {
+ul a {
     list-style: none;
     text-decoration: none;
+}
+
+.btn-salir {
+    display: inline-flex;
+    padding: 20px 10px;
+
+    border: none;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.info-btn {
+    gap: 40px;
 }

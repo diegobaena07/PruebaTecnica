@@ -9,8 +9,9 @@ const Inicio: FC = () => {
 
     return (
         <>
-            <div className="contenido">
-                <div className="Cuadros-informativos">
+            <div className="Contenido-Inicio">
+                <h1>INICIO</h1>
+                {/* <div className="Cuadros-informativos">
                     <CuadroInformativo
                         titulo="Clientes nuevos"
                         numero="18"
@@ -44,7 +45,7 @@ const Inicio: FC = () => {
 
                     </div>
                 </div>
-                <BarChart />
+                <BarChart /> */}
             </div>
         </>
     )
