@@ -11,6 +11,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .titulo-cuadro {
@@ -30,6 +31,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
 }
 
 .numero-letra {
@@ -38,6 +40,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cuadrogeneral-porcentaje {

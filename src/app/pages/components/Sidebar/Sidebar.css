@@ -3,6 +3,7 @@
 .Sidebar {
     width: 250px;
     height: 100vh;
+    min-width: 250px;
     min-height: 100vh;
     overflow-y: scroll;
     background: #1A3D7D;

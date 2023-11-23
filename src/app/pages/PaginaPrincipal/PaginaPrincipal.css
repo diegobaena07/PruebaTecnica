@@ -5,3 +5,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.Contenedor {
+    width: calc(100% - 250px);
+    height: 100vh;
+    min-width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 20px;
+    overflow-y: scroll;
+    background: #FFF;
+    scrollbar-width: thin;
+    scrollbar-color: #c4c4c4 transparent;
+}
+
+/* Estilos específicos de las barras de desplazamiento en Chrome */
+.Contenedor::-webkit-scrollbar {
+    width: 7px;
+}
+
+.Contenedor::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
+}
+
+.Contenedor::-webkit-scrollbar-track {
+    background-color: transparent;
+}

@@ -12,7 +12,7 @@ const PaginaPrincipal: FC = () => {
             <Router>
                 <div style={{ display: "flex" }}>
                     <Sidebar />
-                    <div className="content">
+                    <div className="Contenedor">
                         <Routes>
                             <Route path="" element={<Navigate to='/Inicio' />} />
 
