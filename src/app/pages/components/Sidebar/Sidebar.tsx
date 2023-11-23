@@ -84,12 +84,12 @@ const Sidebar: FC = () => {
                     </ul>
                 </div>
 
-                <div style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "end", marginBottom: "50px" }}>
+                <div style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "end", marginTop: "120px", marginBottom: "30px", }}>
                     <button className="btn-salir">
-                        <div className="info-btn">
+                        <div style={{ display: "inline-flex", justifyContent: "center" }}>
                             <img src="./Salir-icon.svg" />
-                            <span>Salir</span>
                         </div>
+                        <span>Salir</span>
                     </button>
                 </div>
             </div>

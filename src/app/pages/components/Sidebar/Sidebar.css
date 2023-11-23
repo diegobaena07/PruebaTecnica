@@ -53,13 +53,15 @@ ul a {
 
 .btn-salir {
     display: inline-flex;
-    padding: 20px 10px;
-
+    padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #FFF;
-}
-
-.info-btn {
     gap: 40px;
+    background: #FFF;
+    align-items: center;
+    color: #1B1B1B;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
 }
