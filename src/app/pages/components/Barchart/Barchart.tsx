@@ -56,8 +56,6 @@ var misoptions = {
         }
     },
     maintainAspectRatio: false, // Esto evita que el gráfico mantenga el aspect ratio
-    width: 600, // Ancho deseado
-    height: 400, // Alto deseado
 };
 
 var midata = {
@@ -82,7 +80,7 @@ const BarChart = () => {
     return(
         <>
         <div className="BarContainer">
-            <div style={{width: "1093px", height:"256px",paddingLeft: "69px", paddingTop: "7px", paddingRight: "8px"}}>
+            <div style={{width: "76vw", height:"256px",paddingLeft: "69px", paddingTop: "7px", paddingRight: "8px"}}>
                 <Bar data={midata} options={misoptions} className="BarStyles" />
             </div>
         </div>

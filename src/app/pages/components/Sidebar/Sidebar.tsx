@@ -46,7 +46,7 @@ const Sidebar: FC = () => {
                         />
                         <AsideItem
                             tituloItem="Préstamos"
-                            to="/Préstamos"
+                            to="/Prestamos"
                             icon="./Prestamos-icon.svg"
                         />
                         <AsideSubMenu

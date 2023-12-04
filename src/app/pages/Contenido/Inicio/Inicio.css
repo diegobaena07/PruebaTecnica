@@ -42,26 +42,20 @@
     flex-wrap: wrap;
 }
 
-.titulo-2 {
+.Cuadros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sub-title{
     color: #222;
+    font-family: Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-top: 32px;
+    margin-top: 10px;
     margin-bottom: 30px;
-}
-
-.Cuadros-AccionesRapidas {
-    display: inline-flex;
-    gap: 20px;
-}
-
-.cuadro-vacio {
-    width: 213px;
-    height: 274px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    border: 1px solid #D6D5D5;
-    background: #FFF;
 }

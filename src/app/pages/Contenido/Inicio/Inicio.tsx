@@ -1,4 +1,7 @@
+import { BarChart } from "../../components/Barchart/Barchart";
+import { CuadroClientes } from "../../components/CuadroClientes/CuadroClientes";
 import { CuadroInformativo } from "../../components/CuadroInformativo/CuadroInformativo";
+import { CuadroRealizarPedido } from "../../components/CuadroRealizarPedido/CuadroRealizarPedido";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import "./Inicio.css";
 import { FC } from "react";
@@ -31,6 +34,18 @@ const Inicio: FC = () => {
                         letra="Bs"
                         porcentajeVerde="+8.2%" />
                 </div>
+                <div className="sub-title">
+                    <span>Acciones rápidas</span>
+                </div>
+                <div className="Cuadros">
+                    <div>
+                        <CuadroClientes/>
+                    </div>
+                    <div>
+                        <CuadroRealizarPedido/>
+                    </div>
+                </div>
+                <BarChart/>
             </div>
         </>
     )
