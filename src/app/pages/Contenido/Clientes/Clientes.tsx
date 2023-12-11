@@ -18,7 +18,7 @@ const Clientes: FC = () => {
             <div>
                 <PageTitle titulo="Clientes" icon="./clientes-icon.svg" />
                 <FiltroPaginado add={true} exportar={true} paginacion={true} onAdd={AddCliente}>
-
+                    
                 </FiltroPaginado>
             </div>
             {showModal && <AgregarCliente/>}
