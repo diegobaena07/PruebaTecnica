@@ -77,7 +77,7 @@
     align-items: flex-start;
     gap: 5px;
     border-radius: 10px;
-    border: 1px solid var(--Azul-oscuro, #1A3D7D);
+    border: 1px solid #1A3D7D;
     color: #1A3D7D;
     font-size: 12px;
     font-style: normal;

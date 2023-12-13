@@ -5,11 +5,12 @@ type Componentes = {
     exportar: boolean;
     add: boolean;
     paginacion: boolean;
+    infoPedidos?: boolean;
     children?: ReactNode;
     onAdd?: () => void;
 };
 
-const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, onAdd }) => {
+const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, onAdd, infoPedidos }) => {
 
     return(
         <>
@@ -36,7 +37,7 @@ const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, 
                         </div>
                     </div>
                 </div>
-                <div style={{marginTop: "6px", display: "flex", justifyContent:"space-between",  gap: "90px", height: "30px", width: "30%"}}>
+                <div style={{marginTop: "6px", display: "flex", justifyContent:"space-between", flexWrap: "wrap", height: "30px", width: "30%"}}>
                     <div>
                         <button type="button" className="boton-filtro">
                             <span style={{marginRight: "5px"}}>Filtrar</span>
@@ -61,8 +62,37 @@ const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, 
                         </div>
                     }
                 </div>
+                {
+                    infoPedidos && 
+                    <div className="infoPedidos-filtro">
+                        <div style={{display: "flex", gap: "17px", justifyContent: "space-between"}}>
+                            <div className="infoPedidosLetras-filtro">
+                                <span>10 botellones 20 lt</span>
+                            </div>
+                            <div className="infoPedidosLetras-filtro" style={{color: "#1A3D7D", fontWeight: "600"}}>
+                                <span>35 Bs</span>
+                            </div>
+                        </div>
+                        <div style={{display: "flex", gap: "17px", justifyContent: "space-between"}}>
+                            <div className="infoPedidosLetras-filtro">
+                                <span>5 botellones 10 lt</span>
+                            </div>
+                            <div className="infoPedidosLetras-filtro" style={{color: "#1A3D7D", fontWeight: "600"}}>
+                                <span>35 Bs</span>
+                            </div>
+                        </div>
+                        <div style={{display: "flex", gap: "17px", justifyContent: "space-between"}}>
+                            <div className="infoPedidosLetras-filtro">
+                                <span>1 Dispensador</span>
+                            </div>
+                            <div className="infoPedidosLetras-filtro" style={{color: "#1A3D7D", fontWeight: "600"}}>
+                                <span>35 Bs</span>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
-            <div style={{height: "62vh", maxHeight: "62vh", backgroundColor: "black", marginTop: "1em", marginBottom: "1em"}}>
+            <div className="filtroScroll" style={{height: "62vh", maxHeight: "62vh", marginTop: "1em", marginBottom: "1em"}}>
                 {children}
             </div>
             {paginacion &&
@@ -84,7 +114,7 @@ const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, 
                     </div>
                 </div>
             }
-            <div style={{width: "100%", display:"flex", justifyContent: "space-between", alignItems: "end"}}>
+            <div style={{width: "100%", height: "100%", display:"flex", justifyContent: "space-between", alignItems: "end"}}>
                 {exportar && 
                     <div className="boton-exportar">
                         <button type="button" className="btn-export">
