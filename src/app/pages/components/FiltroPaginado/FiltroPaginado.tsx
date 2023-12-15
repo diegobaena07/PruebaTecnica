@@ -1,17 +1,21 @@
+import { Switch } from "../Switch/Switch";
 import "./FiltroPaginado.css";
 import { FC, ReactNode } from "react";
 
 type Componentes = {
-    exportar: boolean;
-    add: boolean;
-    paginacion: boolean;
+    exportar?: boolean;
+    add?: boolean;
+    paginacion?: boolean;
     infoPedidos?: boolean;
     resultados?: boolean;
     children?: ReactNode;
+    swith?: boolean;
+    opcionesSwitch1?: string;
+    opcionesSwitch2?: string;
     onAdd?: () => void;
 };
 
-const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, onAdd, infoPedidos, resultados }) => {
+const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, onAdd, infoPedidos, resultados, swith, opcionesSwitch1, opcionesSwitch2 }) => {
 
     return(
         <>
@@ -96,7 +100,28 @@ const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, 
                     </div>
                 }
             </div>
-            <div className="filtroScroll" style={{height: "62vh", maxHeight: "62vh", marginTop: "1em", marginBottom: "1em"}}>
+            {
+                swith &&
+                <div style={{display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center", marginBottom: "32px", marginTop: "20px"}}>
+                    <div>
+                        <Switch opcion1={opcionesSwitch1!} opcion2={opcionesSwitch2!}/>
+                    </div>
+                    <div style={{ display: "flex", gap: "50px"}}>
+                        <div className="resultado-busqueda">
+                            <span>Resultados:</span>
+                            <span style={{color: "#1A3D7D"}}> 42</span>
+                        </div>
+                        <div className="resultado-busqueda">
+                            <span>Ordenar por: </span>
+                            <select className="select-filtro" name="filter">
+                                <option value="">Más reciente</option>
+                                <option value="">Más antiguos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div className="filtroScroll" style={{height: exportar && add ? "62vh" : "70vh", maxHeight: exportar && add ? "62vh" : "75vh", marginTop: "1em", marginBottom: "1em"}}>
                 {children}
             </div>
             {paginacion &&
