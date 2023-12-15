@@ -6,11 +6,12 @@ type Componentes = {
     add: boolean;
     paginacion: boolean;
     infoPedidos?: boolean;
+    resultados?: boolean;
     children?: ReactNode;
     onAdd?: () => void;
 };
 
-const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, onAdd, infoPedidos }) => {
+const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, onAdd, infoPedidos, resultados }) => {
 
     return(
         <>
@@ -23,19 +24,22 @@ const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, 
                             <img style={{width: "24px", height: "24.5px"}} src="./Buscar.svg" alt="" />
                         </button>
                     </form>
-                    <div style={{ width:"100%", display: "flex", justifyContent: "end", gap: "50px"}}>
-                        <div className="resultado-busqueda">
-                            <span>Resultados:</span>
-                            <span style={{color: "#1A3D7D"}}> 42</span>
+                    {
+                        resultados &&
+                        <div style={{ width:"100%", display: "flex", justifyContent: "end", gap: "50px"}}>
+                            <div className="resultado-busqueda">
+                                <span>Resultados:</span>
+                                <span style={{color: "#1A3D7D"}}> 42</span>
+                            </div>
+                            <div className="resultado-busqueda">
+                                <span>Ordenar por: </span>
+                                <select className="select-filtro" name="filter">
+                                    <option value="">Más reciente</option>
+                                    <option value="">Más antiguos</option>
+                                </select>
+                            </div>
                         </div>
-                        <div className="resultado-busqueda">
-                            <span>Ordenar por: </span>
-                            <select className="select-filtro" name="filter">
-                                <option value="">Más reciente</option>
-                                <option value="">Más antiguos</option>
-                            </select>
-                        </div>
-                    </div>
+                    }
                 </div>
                 <div style={{marginTop: "6px", display: "flex", justifyContent:"space-between", flexWrap: "wrap", height: "30px", width: "30%"}}>
                     <div>
@@ -114,7 +118,7 @@ const FiltroPaginado: FC<Componentes> = ({ exportar, add, paginacion, children, 
                     </div>
                 </div>
             }
-            <div style={{width: "100%", height: "100%", display:"flex", justifyContent: "space-between", alignItems: "end"}}>
+            <div style={{width: "100%", height: "100%", display:"flex", justifyContent: exportar && add === true ? "space-between" : exportar === true ? "start" : "end", alignItems: "end"}}>
                 {exportar && 
                     <div className="boton-exportar">
                         <button type="button" className="btn-export">

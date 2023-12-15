@@ -17,15 +17,10 @@ const Clientes: FC = () => {
 
     return (
         <>
-            <div style={{height: "100vh"}}>
+            <div>
                 <PageTitle titulo="Clientes" icon="./clientes-icon.svg" />
-                <FiltroPaginado add={true} exportar={true} paginacion={true} onAdd={AddCliente}>
+                <FiltroPaginado add={true} exportar={true} paginacion={true} onAdd={AddCliente} resultados={true}>
                     <div style={{ display: "flex", gap: "20px", justifyContent: "start", flexWrap: "wrap"}}>
-                        <InfoCliente/>
-                        <InfoCliente/>
-                        <InfoCliente/>
-                        <InfoCliente/>
-                        <InfoCliente/>
                         <InfoCliente/>
                         <InfoCliente/>
                         <InfoCliente/>

@@ -1,4 +1,4 @@
-import { FC, useContext } from "react"
+import { FC, useContext, useState } from "react"
 import "./CuadroVentaCliente.css"
 import { SmartwaterContext } from "../../../SmartwaterContext"
 import { OpcionesClientes } from "../../Contenido/Clientes/OpcionesClientes/OpcionesClientes"
@@ -6,7 +6,9 @@ import { Option } from "../Option/Option"
 
 const CuadroVentaCliente: FC = () => {
 
-    const { setShowMiniModal, showMiniModal, setShowOptions, showOptions } = useContext(SmartwaterContext)
+    const { setShowMiniModal, showMiniModal } = useContext(SmartwaterContext)
+
+    const [showOptions, setShowOptions] = useState<boolean>(false);
 
     const Opciones = () => {
         setShowOptions(!showOptions);

@@ -5,7 +5,9 @@ import { SmartwaterContext } from "../../../SmartwaterContext"
 
 const InfoCliente: FC = () => {
 
-    const { setShowMiniModal, showMiniModal, setShowOptions, showOptions } = useContext(SmartwaterContext)
+    const { setShowMiniModal, showMiniModal } = useContext(SmartwaterContext)
+
+    const [showOptions, setShowOptions] = useState<boolean>(false);
 
     const Opciones = () => {
         setShowOptions(!showOptions);

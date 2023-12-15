@@ -8,9 +8,9 @@ const Ventas: FC = () => {
 
     return (
         <>
-            <div style={{height: "100vh"}}>
+            <div>
                 <PageTitle titulo="Ventas" icon="./Ventas-icon.svg" />
-                <FiltroPaginado exportar={true} add={false} paginacion={false} infoPedidos={true}>
+                <FiltroPaginado exportar={true} add={false} paginacion={false} infoPedidos={true} resultados={true}>
                     <CuadroVentaCliente/>
                 </FiltroPaginado>
             </div>

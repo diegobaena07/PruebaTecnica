@@ -9,7 +9,7 @@
     width: calc(100% - 252px);
     height: 100vh;
     min-width: calc(100% - 252px);
-    min-height: 100vh;
+    max-height: 100vh;
     padding: 20px;
     overflow-y: scroll;
     background: #FFF;

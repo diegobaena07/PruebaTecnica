@@ -5,8 +5,6 @@ type SmartwaterContextType = {
     setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
     showMiniModal: boolean;
     setShowMiniModal: React.Dispatch<React.SetStateAction<boolean>>;
-    showOptions: boolean;
-    setShowOptions: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const SmartwaterContext = createContext<SmartwaterContextType>(
@@ -16,7 +14,7 @@ export const SmartwaterContext = createContext<SmartwaterContextType>(
 export const SmartwaterProvider = ({ children }: any) => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const [showMiniModal, setShowMiniModal] = useState<boolean>(false);
-    const [showOptions, setShowOptions] = useState<boolean>(false);
+    
 
     return (
         <SmartwaterContext.Provider value={{
@@ -24,8 +22,6 @@ export const SmartwaterProvider = ({ children }: any) => {
             setShowModal,
             showMiniModal, 
             setShowMiniModal,
-            showOptions, 
-            setShowOptions
         }}>
             {children}
         </SmartwaterContext.Provider>
