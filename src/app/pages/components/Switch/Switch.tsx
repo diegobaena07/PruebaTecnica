@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from "react";
+import { FC, useContext} from "react";
 import "./Switch.css";
 import { SmartwaterContext } from "../../../SmartwaterContext";
 

@@ -87,7 +87,7 @@ const Sidebar: FC = () => {
                 <div style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "end", marginTop: "120px", marginBottom: "30px", }}>
                     <button className="btn-salir">
                         <div style={{ display: "inline-flex", justifyContent: "center" }}>
-                            <img src="./Salir-icon.svg" />
+                            <img src="./Salir-icon.svg" alt=""/>
                         </div>
                         <span>Salir</span>
                     </button>

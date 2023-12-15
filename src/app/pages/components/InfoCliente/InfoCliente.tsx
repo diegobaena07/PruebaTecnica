@@ -5,7 +5,7 @@ import { SmartwaterContext } from "../../../SmartwaterContext"
 
 const InfoCliente: FC = () => {
 
-    const { setShowMiniModal, showMiniModal } = useContext(SmartwaterContext)
+    const { setShowMiniModal } = useContext(SmartwaterContext)
 
     const [showOptions, setShowOptions] = useState<boolean>(false);
 
@@ -45,7 +45,7 @@ const InfoCliente: FC = () => {
                 </div>
                 <div>
                     <button type="button" className="btn" onClick={() => setShowMiniModal(true)}>
-                        <img src="./Opciones-icon.svg" />
+                        <img src="./Opciones-icon.svg" alt=""/>
                     </button>
                 </div>
             </div>
@@ -60,7 +60,7 @@ const InfoCliente: FC = () => {
                     <div className="infoClientes-ventas" >
                         <span style={{color: "#1A3D7D"}}>Prestamos activos</span>
                         <div className="infoClientes-moneda">
-                            <img src="./Moneda-icon.svg" />
+                            <img src="./Moneda-icon.svg" alt=""/>
                             <div>
                                 <span>100 Bs.</span>
                             </div>
