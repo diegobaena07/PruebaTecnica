@@ -1,7 +1,7 @@
 import { ChangeEvent, useContext, useState } from "react";
 import "./AgregarCliente.css";
 import { SmartwaterContext } from "../../../../SmartwaterContext";
-import { GoogleMapComponent } from "../../../components/GoogleMaps/GoogleMapComponent";
+//import { GoogleMapComponent } from "../../../components/GoogleMaps/GoogleMapComponent";
 import { ImagenInsertar } from "../../../components/ImagenInsertar/ImagenInsertar";
 
 const AgregarCliente = () => {
@@ -17,7 +17,7 @@ const AgregarCliente = () => {
     const [imageCarnetTrasero, setImageCarnetTrasero] = useState<string | null>(null);
     const [imageCarnetDelantero, setImageCarnetDelantero] = useState<string | null>(null);
     const [imageCasa, setImageCasa] = useState<string | null>(null);
-    const [selectedLocation, setSelectedLocation] = useState<google.maps.LatLng | null>(null);
+    //const [selectedLocation, setSelectedLocation] = useState<google.maps.LatLng | null>(null);
     const [isChecked, setIsChecked] = useState<boolean>(false);
     const [isChecked2, setIsChecked2] = useState<boolean>(false);
     const apiKey = 'TU_API_KEY';
@@ -60,9 +60,9 @@ const AgregarCliente = () => {
         setImageCasa(imagen);
     };
 
-    const handleLocationSelect = (location: google.maps.LatLng) => {
+    /*const handleLocationSelect = (location: google.maps.LatLng) => {
         setSelectedLocation(location);
-    };
+    };*/
 
     const toggleSwitch = () => {
         setIsChecked(!isChecked);
@@ -203,11 +203,11 @@ return (
                             <div className="Ubi-Google">
                                 {/* <GoogleMapComponent apiKey={apiKey} onLocationSelect={handleLocationSelect} /> */}
                             </div>
-                            {selectedLocation && (
+                            {/* {selectedLocation && (
                                 <div className="Ubi-Google">
                                     Ubicación seleccionada: {selectedLocation.lat()}, {selectedLocation.lng()}
                                 </div>
-                            )}
+                            )} */}
                         </div>
                         <div className="grupo-input" style={{flexDirection: "column"}}>
                             <div className="switch-input">
