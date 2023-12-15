@@ -1,9 +1,17 @@
+import { FormEvent } from "react";
 import "./CuadroRealizarPedido.css";
 
 const CuadroRealizarPedido = () => {
+
+
+    const handletSubmit = async () => {
+        console.log("hola Mundo")
+    }
+
+
     return (
         <>
-            <form action="">
+            <form action="" onSubmit={handletSubmit}>
                 <div className="RealizarPedidoCuadro">
                     <div className="titulo-RealizarPedido">
                         <div>
@@ -15,7 +23,7 @@ const CuadroRealizarPedido = () => {
                     </div>
                     <div>
                         <select name="cliente" id="cliente" className="selec-pedido">
-                            <option className="opcion1" value="opciones1" >Cliente</option>
+                            <option value="opciones1" >Cliente</option>
                         </select>
                         <select name="cliente" id="cliente" className="selec-pedido">
                             <option value="opciones1" >Botellon de 20 Lts</option>
@@ -25,8 +33,8 @@ const CuadroRealizarPedido = () => {
                                 <span style={{ marginLeft: "10px" }}>Cantidad</span>
                                 <div className="numero-pedido">
                                     <button type="button" className="boton"><img src="./BotonMenos-icon.svg" /></button>
-                                    <div className="numero-solicitado">
-                                        <span>1</span>
+                                    <div>
+                                        <input type="text" defaultValue="1" className="numero-solicitado"/>
                                     </div>
                                     <button type="button" className="boton"><img src="./BotonMas-icon.svg" /></button>
                                 </div>
@@ -40,6 +48,9 @@ const CuadroRealizarPedido = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div style={{ minWidth: "96%", width: "96%", marginTop: "11px", display: "flex", justifyContent: "end"}}>
+                            <button className="boton-realizar-pedido" type="submit">Realizar Pedido</button>
                         </div>
                     </div>
                 </div>

@@ -1,66 +1,45 @@
 import "./PaginaPrincipal.css";
-import { Sidebar } from "../components/Sidebar/Sidebar";
 import { FC } from "react";
-import { CuadroInformativo } from "../components/CuadroInformativo/CuadroInformativo";
-import { CuadroClientes } from "../components/CuadroClientes/CuadroClientes";
-import { CuadroRealizarPedido } from "../components/CuadroRealizarPedido/CuadroRealizarPedido";
-import { BarChart } from "../components/Barchart/Barchart";
+import { Sidebar } from "../components/Sidebar/Sidebar";
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Clientes } from "../Contenido/Clientes/Clientes";
+import { Inicio } from "../Contenido/Inicio/Inicio";
+import { MapaClientes } from "../Contenido/MapaClientes/MapaClientes";
+import { MonitoreoDistribuidores } from "../Contenido/MonitoreoDistribuidores/MonitoreoDistribuidores";
+import { Ventas } from "../Contenido/Ventas/Ventas";
+import { Pedidos } from "../Contenido/Pedidos/Pedidos";
+import { Prestamos } from "../Contenido/Préstamos/Prestamos";
 
 const PaginaPrincipal: FC = () => {
 
     return (
         <>
-            <div className="container">
-                <Sidebar />
-                <div className="contenido">
-                    <div className="titulo-1">
-                        <div className="home">
-                            <img src="./home-icon.svg" className="img-HomeInicio" />
-                            <div className="letras-home">
-                                <span>Inicio</span>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="./Notificacion-icon.svg" />
-                        </div>
+            <Router>
+                <div style={{ display: "flex" }}>
+                    <Sidebar />
+                    <div className="Contenedor">
+                        <Routes>
+                            <Route path="" element={<Navigate to='/Inicio' />} />
+
+                            <Route path='/Inicio' element={<Inicio />} />
+
+                            <Route path='/Clientes' element={<Clientes />} />
+
+                            <Route path='/MapaClientes' element={<MapaClientes />} />
+
+                            <Route path='/MonitoreoDistribuidores' element={<MonitoreoDistribuidores />} />
+
+                            <Route path='/Ventas' element={<Ventas />} />
+
+                            <Route path='/Pedidos' element={<Pedidos />} />
+
+                            <Route path='/Prestamos' element={<Prestamos />} />
+
+                            <Route path="*" element={<Navigate to='/Inicio' />} />
+                        </Routes>
                     </div>
-                    <div className="Cuadros-informativos">
-                        <CuadroInformativo
-                            titulo="Clientes nuevos"
-                            numero="18"
-                            porcentajeVerde="+8.2%" />
-
-                        <CuadroInformativo
-                            titulo="Préstamos activos"
-                            numero="25"
-                            porcentajeRojo="+8.2%" />
-
-                        <CuadroInformativo
-                            titulo="Pedidos totales"
-                            numero="1,236"
-                            porcentajeVerde="+8.2%" />
-
-                        <CuadroInformativo
-                            titulo="Clientes nuevos"
-                            numero="1,783"
-                            letra="Bs"
-                            porcentajeVerde="+8.2%" />
-                    </div>
-                    <div className="titulo-2">
-                        <span>Acciones rápidas</span>
-                    </div>
-                    <div className="Cuadros-AccionesRapidas">
-                        <CuadroClientes />
-
-                        <CuadroRealizarPedido />
-
-                        <div className="cuadro-vacio">
-
-                        </div>
-                    </div>
-                    <BarChart/>
                 </div>
-            </div>
+            </Router>
         </>
     )
 }

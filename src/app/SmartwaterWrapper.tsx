@@ -7,9 +7,9 @@ const SmartwaterWrapper: FC = () => {
 
     return (
         <>
-        <SmartwaterProvider>
-            <PaginaPrincipal/>
-        </SmartwaterProvider>
+            <SmartwaterProvider>
+                <PaginaPrincipal />
+            </SmartwaterProvider>
         </>
     )
 

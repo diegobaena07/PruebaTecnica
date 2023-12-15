@@ -1,26 +1,37 @@
+import { NavLink, useLocation } from "react-router-dom";
 import "./AsideItem.css";
 
 type Item = {
-    titulo: string,
-    img?: string,
+    tituloItem: string,
+    to: string,
+    icon: string,
     iconDesplegable?: string
+    notificacion?: string
 }
 
-const AsideItem = ({ titulo, img, iconDesplegable }: Item) => {
+const AsideItem = ({ tituloItem, to, icon, iconDesplegable, notificacion }: Item) => {
+    const location = useLocation();
+    const isActive = location.pathname === to;
+
     return (
         <>
-            <div className="framer"
-                style={iconDesplegable !== undefined ? { justifyContent: "flex-start", alignItems: "center", gap: 30, display: "inline-flex" } : {}}>
-                <div className="item">
-                    <img src={img} />
-                    <div className="letras">
-                        <span>{titulo}</span>
+            <NavLink to={to}>
+                <div className={isActive ? "background-item active-link" : "background-item"}>
+                    <span className="biñeta-item"></span>
+                    <div className="info-item">
+                        <img src={icon} alt="" />
+                        <span className="titulo-item">{tituloItem}</span>
+                        {
+                            notificacion !== undefined ?
+                                <div className="notificacion-item">
+                                    <span>{notificacion}</span>
+                                </div>
+                                :
+                                null
+                        }
                     </div>
                 </div>
-                {iconDesplegable &&
-                    <div><img src={iconDesplegable} /></div>
-                }
-            </div>
+            </NavLink>
         </>
     )
 }
